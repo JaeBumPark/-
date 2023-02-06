@@ -1,0 +1,16 @@
+import sys
+from collections import deque
+sys.stdin=open("input5.txt", "rt")
+n, m =map(int, input().split())
+dq=[(index, val) for index, val]
+dq=deque(dq)  #deque랍니다~
+cnt=0
+
+
+while dq:
+  cur=dq.popleft()  
+  if any(cur< x for x in dq):
+        
+        dq.append(cur)  
+  else:
+      if cur[]

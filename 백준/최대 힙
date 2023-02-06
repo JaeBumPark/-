@@ -1,0 +1,8 @@
+from collections import deque
+n=int(input())
+dq=list()
+dq=deque(dq)
+output=0
+for i in range(n):
+  k=int(input())
+  

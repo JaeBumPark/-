@@ -1,0 +1,21 @@
+# n=int(input())
+# l=[]
+# for i in range(n):
+#   k=int(input())
+#   l.append(k)
+# l.sort()
+# for i in l:
+#     print(i)
+# 카운트 정렬
+n=int(input())
+l=[]
+for i in range(n):
+    k=int(input())
+    l.append(k)
+
+count = [0] * (max(l) + 1)
+
+for j in l:
+    count[j] += 1
+count.pop(0)    
+print(count)

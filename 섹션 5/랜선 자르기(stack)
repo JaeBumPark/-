@@ -1,0 +1,28 @@
+import sys
+sys.stdin=open("input5.txt", "rt")
+n=list(input())
+stack=[]
+cnt=0
+
+for i in range(len(n)):
+    if n[i]=='(':
+      stack.append(n[i])
+    # else:
+    #     if n[i-1]=='(': #laser!
+    #         stack.pop()   #안에 있는 ( 빼고
+    #         cnt+=len(stack)
+    #     else: #()임으로 쇠막대기!
+    #         stack.pop()
+    #         cnt+=1
+
+    else:
+        stack.pop()
+        if n[i-1]=='(': #laser!
+               #안에 있는 ( 빼고
+            cnt+=len(stack)
+        else: #()임으로 쇠막대기!
+            
+            cnt+=1        
+            
+print(cnt)    
+

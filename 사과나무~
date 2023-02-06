@@ -1,0 +1,8 @@
+import sys
+sys.stdin=open("input3.txt", "rt")
+n=int(input())
+a=[list(map(int, input().split())) for _ in range(n)]
+ap=0
+s=e=n/2
+for i in range (n)
+  if s

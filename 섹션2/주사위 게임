@@ -1,0 +1,27 @@
+import sys
+sys.stdin=open("input.txt", "rt")
+n= int(input())
+price=0
+res=0
+for i in range(n):
+  tmp=input().split()  #split은 받은 문자열을 잘라서 리스트로 만들어줌!
+  tmp.sort()
+  a,b,c = map(int, tmp) #a,b,c에 각 list에 있는 문자열들이 int화 되어 a,b,c에 드감
+  
+  if a==b and b==c:
+    price=10000+a*1000
+  elif a==b or a==c:
+    price=1000+a*100
+  elif b==c:
+    price=1000+b*100
+  elif a==c:
+    price=1000+a*100    
+  else:
+    price=c*100
+  if price>res:
+     res=price  ##여기에다가 상금 초기화!
+  print(price)  
+print(res)    
+
+
+  

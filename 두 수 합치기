@@ -1,0 +1,27 @@
+import sys
+sys.stdin=open("input3.txt", "rt")
+n, k=map(int,input().split())
+a=list(map(int, input().split()))
+print(a)
+lt =0
+rt =1
+tot =a[0]
+cnt =0 
+
+while True: #거짓일때 까지
+    if tot<k:
+        if rt<n:
+            tot+=a[rt]
+            rt+=1
+        else:
+          break
+    elif tot==k:
+        cnt+=1
+        tot-=a[lt]
+        lt+=1
+    else:
+        tot-=a[lt]        
+        lt+=1
+
+print(cnt)  
+

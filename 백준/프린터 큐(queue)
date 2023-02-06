@@ -1,0 +1,49 @@
+# import sys
+# from collections import deque
+ T= int(input())
+
+# for i in range(T):
+#   n, m= map(int, input().split())
+# #   for j in range(n):
+#   Q=[(index,value) for index, value in enumerate(list(map(int, input().split())))]
+#   Q=deque(Q)
+#   cnt=0
+#   while Q:
+#     cur=Q.popleft()
+#     if any(cur[1]<x[1] for x in Q):
+#        Q.append(cur)
+#     else:
+#         cnt+=1
+#         if cur[0]==m:
+#             print(cnt)
+            
+#other
+T_num = int(input())
+for i in range(T_num):
+    answer = 1
+    long, target_idx= map(int, input().split())
+    lst =[i for i in (map(int, input().split()))]
+######################받아오기 끝##############################
+    #기준 점을 찾아보자
+    if max(lst) == lst[target_idx]: #내가 제일 큰놈 일때
+        for i in range(0,target_idx):
+            if lst[i] == lst[target_idx]:
+                answer +=1#내앞에 몇명인지
+    else: #내가 제일 큰 놈이 아닐때
+        for idx in range(0,len(lst)):
+            if lst[idx]>lst[target_idx]:
+                pvt_idx = idx
+                answer+=1 #나보다 큰 값은 당연히나옴 
+        #pvt_idx => 가장 마지막으로 큰놈
+        if pvt_idx < target_idx: #가장 마지막으로 큰놈이 내앞에 있다 -> thank
+            for i in range(pvt_idx+1,target_idx):
+                if lst[i] == lst[target_idx]:
+                    answer +=1#내앞에 몇명인지
+        else:#내위로 니 밑으로
+            for i in range(pvt_idx+1,len(lst)):
+                if lst[i] == lst[target_idx]:
+                    answer +=1#내앞에 몇명인지
+            for i in range(0,target_idx):
+                if lst[i] == lst[target_idx]:
+                    answer +=1#내앞에 몇명인지
+    print(answer)

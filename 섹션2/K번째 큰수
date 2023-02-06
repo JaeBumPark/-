@@ -1,0 +1,7 @@
+import sys
+sys.stdin=open("input.txt", "rt")
+N, K= map(int, input().split()) #첨에 case 저장
+a= list(map(int, input().split())) #list들 저장
+res =set() #set자료구조, 중복해서 넣어도 한번만 들어간다!! 중복을 제거한다!
+for i in range(N):
+    for j in range(i+1)

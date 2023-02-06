@@ -1,0 +1,26 @@
+import sys
+sys.stdin=open("input3.txt", "rt")
+n=int(input())
+a=[list(map(int, input().split())) for _ in range(n)] #2차원 배열!
+print(a)
+for x in a:
+    print(x) #x는 각 행
+largest=-14321432
+for i in range(n):
+    sum1=sum2=0 #1, 2, 는 각각 행,열의 합, 안에 반복문 까지 돌고 초기화됨
+    for j in range(n): # nxn해서 25개
+        sum1+=a[i][j] #0~4행
+        sum2+=a[i][j]
+    if sum1>largest:
+        largest=sum1
+    if sum2>largest:
+        largest=sum2    
+sum1=sum2=0 #초기화
+for i in range(n):
+    sum1+=a[i][i]
+    sum2+=a[i][n-1-i]
+    if sum1>largest:
+        largest=sum1
+    if sum2>largest:
+        largest=sum2 
+print(largest)        

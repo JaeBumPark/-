@@ -1,0 +1,27 @@
+# ''하면 그냥 string으로 추가되는구나..
+
+x=int(input())
+def solution(n):
+    answer = '     '
+    while n:
+      if n%3==0:  #3의 배수라면?
+          answer+='4'
+          n=(n//3)-1
+         
+      else:    #씨발 아니라면?!!
+         
+        answer+=str(n%3) ##string형
+        n=n//3
+    return (answer[::-1])
+print(solution(x))
+
+# ; #w중요!
+# ; answer=''
+# ; answer+="fds"
+# ; answer+="sex"
+
+# ; num=["1", "2", "4"]
+# ; print(num[])'17
+
+
+#// float /int

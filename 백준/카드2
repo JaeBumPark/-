@@ -1,0 +1,11 @@
+import sys
+from collections import deque
+n=int(input())
+dq=list(range(1,n+1))
+dq=deque(dq)
+
+for _ in range (n-1):
+    dq.popleft()
+    a=dq.popleft()
+    dq.append(a)
+print(dq[0])    

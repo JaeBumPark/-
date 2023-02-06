@@ -1,0 +1,12 @@
+import sys
+from collections import deque
+sys.stdin=open("input5.txt", "rt")
+must=input()
+n=int(input())
+for i in range(n):
+    case=input()
+    Q=deque(must)
+    for x in case:
+         if x in Q: #만약 필수 조건안에 있는것이 있다면
+              if x!=Q.popleft()
+

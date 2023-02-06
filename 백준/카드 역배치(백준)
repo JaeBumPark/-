@@ -1,0 +1,10 @@
+l=list(range(1,21)) ##중요!!! 1부터 21 list 만드는법!!!
+
+for i in range(10):
+   n, k= map(int, input().split())
+   for j in range((k-n+1)//2):
+    #   l[n+j-1]=l[k-j-1]
+    #   l[k-j-1]=l[n+j-1]   이거랑 아래랑 뭐가다름? 씨발
+    l[n+j-1], l[k-j-1] = l[k-j-1], l[n+j-1]
+for k in range(len(l)):
+    print(l[k], end = ' ')  #list 요소 하나하나로 출력

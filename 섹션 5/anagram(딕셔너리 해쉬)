@@ -1,0 +1,12 @@
+import sys
+# sys.stdin=open("input5.txt", "rt")
+n=input()
+m=input()
+
+D=dict()
+
+for i in range(len(n)):
+    D[n]=i
+for j in range(len(m)): 
+    D[m]=j  
+    

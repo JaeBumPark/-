@@ -1,0 +1,17 @@
+import sys
+from collections import deque
+n, k =map(int, input().split())
+dq=list(range(1,n+1)) #복습! 1부터 n까지 list
+dq=deque(dq)  #deque랍니다~
+l=[]
+person=0
+while dq:
+    for i in range(k-1):#k에 명시된 사람 앞까지
+        person=dq.popleft() #queue 왼쪽에서 빼버리고
+        dq.append(person)   #뒷 꽁무니로 Insert
+    l.append(dq.popleft())   #k번째 녀석은 빼버리구
+    if len(dq)==1:  #한명만 남았을때
+        l.append(dq.pop())
+            #마지막 녀석까지 빼버리면서 while문을 멈춰버림
+# print("<",", ".join(l)[:],">", sep='') #join 해결
+print("<",', '.join(map(str, l)),">", sep="")
