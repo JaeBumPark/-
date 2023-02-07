@@ -1,5 +1,4 @@
-import sys
-sys.stdin=open("input3.txt", "r")
+
 n=int(input())
 print(n)
 for i in range (n):
