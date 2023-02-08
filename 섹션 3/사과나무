@@ -1,5 +1,0 @@
-import sys
-sys.stdin=open("input3.txt", "rt")
-n=int(input())
-a=[list(map(int, input().split())) for _ in range(n)] #2차원 배열!
-
