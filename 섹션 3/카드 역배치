@@ -8,4 +8,4 @@ for _ in range(10):
   for j in range ((e-s+1)//2):
      l[s+j], l[e-j]=l[e-j], l[s+j]
 
-print(l)
+print(l)                  

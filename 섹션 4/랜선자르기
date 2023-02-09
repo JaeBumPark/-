@@ -1,5 +1,4 @@
-import sys
-sys.stdin=open("input4.txt", "rt")
+#이분 검색
 def Count(len): #
      cnt=0
      for x in L:

@@ -1,5 +1,4 @@
-import sys
-sys.stdin=open("input.txt", "rt")
+
 T =int(input())  #case를 읽음
 for t in range(T): #case만큼 돎!
     n, s, e, k= map(int, input().split()) # map은 리스트의 요소를 지정된 함수 #몇번 도는지 변수
