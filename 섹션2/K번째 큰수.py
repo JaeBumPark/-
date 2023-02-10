@@ -8,8 +8,10 @@ for i in range(N):
             res.add(a[i]+a[j]+a[m])
 res=list(res)
 res.sort(reverse=True)
-print(res(K-1))           
+print(res, end= ' ')
+print(res[K-1])           
 
 #set 과 add
 # set 자료구조는 중복값이 들어가도 한번만 들어감!
 # set 자료구조에 추가하기 위해선 add!
+# set은 sort 기능이 없음으로 list 화 시킨 후 sort 해줘야 한다.

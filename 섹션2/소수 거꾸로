@@ -1,28 +1,28 @@
-from calendar import c
-import sys
-sys.stdin=open("input.txt", "r")
 
 # 역수를 구하는 함수!
 def reverse(x):
     res=0
-    while x>0:
-          t=x%10
-          res=res*10+t
-          x=x//10
+    t=x%10 #나머지
+    while x>0: #x가 0보다 작아지면 탈출!!       
+      res=res*10+t
+      x=x//10
     return res     
 
 def isPrime(x):  
-    if x==1:
+    if x == 1:
         return False
     for i in range(2, x//2+1):
-        if x%1==0:
-          return False   
+        if x%i == 0:
+            return False
     else:
-        return True
-N= int(input())
-K= list(map(int, input().split()))
+       return True  
+        
+n = int(input())
+k = list(map(int, input().split()))
 
-for X in K: 
-    tmp=reverse(X)
-    if isPrime(tmp):
-         print(tmp, end=' ')
+for x in k: 
+   s=reverse(x)
+   if isPrime(s):
+      print(s)
+ㄹㄴㅇㄹㅁㄴㅇㅁㄴㅇ
+         

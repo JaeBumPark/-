@@ -1,9 +1,0 @@
-#최솟갑 구하기!
-
-
-arr = [ 7, 4, 6, 8, 13, 2, 6]
-arrMin = float('inf')  #최솟값 변수
-for i in range(len(arr)) :
-    if arr[i] < arrMin:
-        arrMin=arr[i]
-print(arrMin)        

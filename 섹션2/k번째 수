@@ -8,7 +8,3 @@ for t in range(T): #case만큼 돎!
     a.sort() #오름차순 정렬
     print("#%d %d" %(t, a[k-1]))  #K번재 ㅑndex 출력, t번째 case에선, 뭐뭐
 
-"""""
-for x in range(2):  #2번!
-   print("hi")
-"""""
