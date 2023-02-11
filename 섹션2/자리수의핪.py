@@ -4,7 +4,7 @@ max=-12341212
 
 def digit_sum(x):
     sum=0
-    while x<0: # x가 0보다 작아지면 탈출
+    while x>0:
       sum=sum+x%10 #내머지
       x=x//10 #몫
     return sum  # 자릿수의 합
