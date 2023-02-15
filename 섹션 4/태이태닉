@@ -1,10 +1,6 @@
-# b=[1,2,3,4]
-# b.pop(-1)
-# b.pop(-1)
-# print(len(b)) #pop하면 길이도 줄어드는구나!
-import sys
-from collections import deque #deque 사용법
-sys.stdin=open("input4.txt", "rt")
+
+
+from collections import deque
 
 n, k=map(int, input().split())
 a=list(map(int,input().split()))
