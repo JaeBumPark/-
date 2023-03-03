@@ -6,6 +6,10 @@ cnt = 0
 a.sort()
 
 while a: # while list? => list가 빌 때 까지 수행!!!!
+    if len(a) == 1: # 한명 남았으면
+       cnt += 1
+       break
+
     if a[0] + a[-1] > k:
         a.pop()
         cnt += 1

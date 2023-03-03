@@ -1,9 +1,0 @@
-import sys
-sys.stdin=open("input5.txt", "rt")
-n=input()
-stack=[]
-for i in range(n):
-    if i.isdecimal(): # if i==int(): 진짜 병신인가 ;
-      stack.append(n(i))
-    if i=="*"
-           
