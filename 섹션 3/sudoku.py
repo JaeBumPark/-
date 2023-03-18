@@ -9,7 +9,7 @@ def check(v):
         for j in range (9): 
             ch1[v[i][j]]=1# 행 check
             ch2[v[j][i]]=1
-        if sum(ch1)!=9 or sum(ch2)!=9:
+        if sum(ch1)!=9 or sum(ch2)!=9: # sum 함수로 list의 핪
             return False   
         else:
             return True   
