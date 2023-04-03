@@ -19,10 +19,15 @@
 
 list=[]
 
-for i in range(3):
-    [a, b, c, d] = map(str, input().split())
+# for i in range(3):
+#     [a, b, c, d] = map(str, input().split())
     
-    list.append([a, int(b), int(c), int(d)])
+#     list.append([a, int(b), int(c), int(d)])
     
-sorted=sorted(list, key=lambda x: (len(x[0])))
-print(sorted)
+# sorted=sorted(list, key=lambda x: (len(x[0])))
+# print(sorted)
+
+for _ in range(3):
+    list.append(input().split()) # 이래도 똑같이 들어가네...
+    
+print(list)    
