@@ -1,23 +1,20 @@
+n= int(input())
+x = 1 # 시작 좌표
+y = 1
+plans = input().split()
 
-
-# print(plans) # list로 출력됨
-a=1
-b=1
-n = int(input())
-B= input().split()
-
-x= [-1, 1, 0, 0]
-y= [0, 0, 1, -1]
-Bu = ["L", "R", "U", "D"]
-
-for plan in B:    #입력한 값 중에
-    for i in range (len(Bu)): # Bu list 길이 만큼 반복 = 4 만큼 반복
-        if B == Bu[i]:
-            CX = a+ x[i]
-            CY = b+ y[i]
-    # if a < 1 or int(b) < 1 :          
-    #    continue
-   a = CX
-   b = CY
+dx = [0,0,-1,1] #L, R, ,U, D
+dy = [-1,1,0,0] # L, R, U, D
+moving_type = ["L", "R", "U", "D"]
+for plan in plans: #이동 Plan중
+    for i in range(len(moving_type)): #moving type 중에
+        if plan == moving_type[i]:  # plan과 moving type이 같을경우
+           nx = x + dx[i] # 이동 예상 경로는 각 plan별로 움직임
+           ny = y + dy[i]
+    if nx < 1 or ny < 1: # 만약 이동 예상 경로가 좌표를 벗어난다면?
+       continue # (뒤의 코드를 무시하므로) 이동 X
    
-print(a, b)
+    x = nx
+    y = ny       
+
+print(x, y)        
