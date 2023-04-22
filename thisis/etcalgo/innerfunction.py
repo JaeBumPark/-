@@ -19,3 +19,7 @@ from itertools import combinations
 result3=list(combinations(data1, 3)) #4C3
 
 print(result3)
+#collection
+
+# heapq
+## 우선순위 queue를 위해

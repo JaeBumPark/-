@@ -1,13 +1,17 @@
-S=list(input())
-num=0
-strlist=[]
-for i in S:
+n = input()
+result=[]
+value = 0
+
+for i in n:
+
     if i.isalpha():
-       strlist.append(i) 
-    if  i.isdecimal():
-       num+=int(i)
-strlist.sort()
-strlist.append(str(num))
-       
-print(''.join(strlist))        
- 
+       result.append(i)
+    else: 
+       value += int(i)
+   
+result.sort()
+result.append(str(value))
+
+
+
+print(''.join(result))              
