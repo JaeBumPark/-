@@ -22,3 +22,9 @@ queue.appendleft(12)
 print(queue)
 print(list(queue)) # list 자료형으로 변경
 
+##재귀 함수
+
+def recursive_function(i):
+    if i == 100:
+       return
+    print() 

@@ -7,9 +7,9 @@ def DFS(l, sum): #l은 tree의 level, sum은 부분집합!
       DFS(l+1, sum+1)
       DFS(l+1, sum)       
 
-if __name__=="__main__":
+
   
-  n = int(input())
-  a=list(map(int, input().split()))
-  total=sum(a)
-  DFS(0,0)
+n = int(input())
+a=list(map(int, input().split()))
+total=sum(a)
+DFS(0,0)

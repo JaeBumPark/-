@@ -1,15 +1,19 @@
 n = int(input())
-smo = []
-for i in range(n):
-    l, w = map(int, input().split())
-    smo.append((l, w))
-smo.sort(reverse=True)
-# print(smo)
-cnt = 0  # 대회 나갈 수 있는 명 수
-mx = 0  # 최대 몸무게
-for l, w in smo:
-    if w > mx:
-        mx = w
-        cnt += 1
+array = []
 
-print(cnt)
+for i in range(n):
+    h, w = map(int,input().split())
+    array.append((h,w))
+    
+array.sort(reverse=True) # 내림차순으로 정렬
+
+cnt = 0 # 답
+mx = 0 #최대 몸무게
+
+for h,w in array:
+    if w> mx:
+       mx = w
+       cnt += 1
+       
+print(cnt)             
+
