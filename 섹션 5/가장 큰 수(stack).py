@@ -12,7 +12,7 @@ for x in n:
 #   stack=stack[:-m] #슬라이싱! -m번째 배열 전까지!
 
 # print(stack)
-for x in stack:
+# for x in stack:
     # print(x, end='') #공백없이 출력! or
-  res=''.join(map(str, stack))
+res=''.join(map(str, stack))
 print(res)

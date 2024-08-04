@@ -1,0 +1,8 @@
+# https://juhee-maeng.tistory.com/91
+from itertools import permutations, combinations
+
+num = "1243"
+p_list= []
+for p in permutations(num, 2):
+    p_list.append(int("".join(p)))
+print(p_list)    

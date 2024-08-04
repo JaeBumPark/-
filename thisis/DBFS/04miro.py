@@ -2,11 +2,9 @@ from collections import deque
 
 N, M = int(input().split())
 
-graph = []
+graph = [list(map(int,input())) for _ in range (N)]
 
-for i in range(N):
-    graph.append(list(map(int, input().split())))
-    
+
 dx = [-1,0,1,0] # 북, 동, 남 ,서
 dy = [0,1,0,-1]  
 
