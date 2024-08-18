@@ -28,9 +28,8 @@ def bfs():
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx <= 2 and 0 <= ny <= 2: # 이동 가능한 위치일 경우
-                # nx, ny를 다시 리스트의 인덱스로 바꾸자
-                nz = nx * 3 + ny
-                puzzle_list = list(puzzle) # 원소 스와핑을 위해 문자열을 리스트로 바꾸자
+                nz = nx * 3 + ny                 # nx, ny(행,렬)을 리스트의 인덱스로 change
+                puzzle_list = list(puzzle) # 문자열 -> list
                 puzzle_list[z], puzzle_list[nz] = puzzle_list[nz], puzzle_list[z]
                 new_puzzle = "".join(puzzle_list) # 딕셔너리를 위해 다시 문자열로
                 
@@ -41,5 +40,6 @@ def bfs():
                     
     return -1
                     
-print(bfs())
+# print(bfs())
         
+print(visited_dict)

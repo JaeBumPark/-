@@ -20,7 +20,6 @@ def bfs():
     while q:
         x, y = q.popleft()         # A물통에 있는 물: x, B물통에 있는 물: y, C물통에 있는 물: z
         z = c - x - y
-        
         if x == 0:
             answer.append(z)          # A 물통이 비어있는 경우에 C 물통에 남아있는 양 저장
 
@@ -28,22 +27,20 @@ def bfs():
         water = min(x, b - y)
         pour(x - water, y + water)         # A에서 B로 물 이동
 
-        # A에서 C로 물 이동
-        water = min(x, c - z)
+        water = min(x, c - z)         # A에서 C로 물 이동
+
         pour(x - water, y)
         
-        # B에서 C로 물 이동
-        water = min(y, c - z)
+        water = min(y, c - z)         # B에서 C로 물 이동
+
         pour(x, y - water)
-        # B에서 A로 물 이동
-        water = min(y, a - x)
+        water = min(y, a - x)          # B에서 A로 물 이동
         pour(x + water, y - water)
         
-        # C에서 A로 물 이동
-        water = min(z, a - x)
+        water = min(z, a - x)          # C에서 A로 물 이동
         pour(x + water, y)
-        # C에서 B로 물 이동
-        water = min(z, b - y)
+        
+        water = min(z, b - y)         # C에서 B로 물 이동
         pour(x, y + water)
         
 bfs()
