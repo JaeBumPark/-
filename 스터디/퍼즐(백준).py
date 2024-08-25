@@ -28,18 +28,17 @@ def bfs():
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx <= 2 and 0 <= ny <= 2: # 이동 가능한 위치일 경우
-                nz = nx * 3 + ny                 # nx, ny(행,렬)을 리스트의 인덱스로 change
+                nz = nx * 3 + ny                 # nx, ny(행,렬)을 리스트의 인덱스로 change(1차원 배열의 Index로)
                 puzzle_list = list(puzzle) # 문자열 -> list
                 puzzle_list[z], puzzle_list[nz] = puzzle_list[nz], puzzle_list[z]
                 new_puzzle = "".join(puzzle_list) # 딕셔너리를 위해 다시 문자열로
                 
-                # 방문하지 않았다면
-                if visited_dict.get(new_puzzle, 0) == 0:
+                if visited_dict.get(new_puzzle, 0) == 0:       # 중복되는 상태가 아니라면,즉 Key값이 0이라면,
                     visited_dict[new_puzzle] = cnt 
                     queue.append(new_puzzle)
                     
     return -1
                     
-# print(bfs())
+print(bfs())
         
-print(visited_dict)
+# print(visited_dict)
