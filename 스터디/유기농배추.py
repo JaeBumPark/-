@@ -35,3 +35,5 @@ for _ in range(t):
                 count += 1  # 그룹 수 증가
 
     print(count)  # 그룹 수 출력
+
+
