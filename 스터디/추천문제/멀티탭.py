@@ -9,8 +9,7 @@ answer = 0  # 플러그를 뽑는 횟수
 
 for i in range(K):
     if L[i] in code:     # 이미 멀티탭에 꽂혀 있는 기기라면 pass
-
-        continue
+       continue
 
   
     if len(code) < N:   # 멀티탭에 자리가 남아있다면 새로운 기기를 꽂는다.
@@ -24,12 +23,10 @@ for i in range(K):
         if c in L[i:]:  # 멀티탭에 꽂힌 기기가 앞으로도 사용될 경우
             priority.append(L[i:].index(c))
         else:  # 사용되지 않는다면 매우 큰 값을 넣어 우선적으로 뽑도록 설정
-            priority.append(101)
+            priority.append(999)
 
-    # 가장 우선순위가 낮은 기기의 인덱스를 찾는다.
-    out_idx = priority.index(max(priority))
-    # 그 기기를 빼고 새로운 기기를 꽂는다.
-    code[out_idx] = L[i]
+    out_idx = priority.index(max(priority))     # 가장 우선순위가 낮은 기기의 인덱스를 찾는다.
+    code[out_idx] = L[i]     # 그 기기를 빼고 새로운 기기를 꽂는다.
     answer += 1
 
 # 최소 플러그를 뽑는 횟수 출력
